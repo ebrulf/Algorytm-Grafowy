@@ -1,4 +1,7 @@
-﻿namespace Algorytm
+﻿using System.Collections.Generic;
+using System;
+using wierzcholki_rozdzielajace;
+namespace Algorytm
 {
     public class Graph
     {
@@ -7,7 +10,10 @@
         private List<int>[] adj;
         int time = 0;
         static readonly int NIL = -1;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="v"></param>
         public Graph(int v)
         {
             V = v;
@@ -15,13 +21,25 @@
             for (int i = 0; i < v; ++i)
                 adj[i] = new List<int>();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="v"></param>
+        /// <param name="w"></param>
         public void addEdge(int v, int w)
         {
             adj[v].Add(w);
             adj[w].Add(v); 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="visited"></param>
+        /// <param name="disc"></param>
+        /// <param name="low"></param>
+        /// <param name="parent"></param>
+        /// <param name="ap"></param>
         void APUtil(int u, bool[] visited, int[] disc,
                     int[] low, int[] parent, bool[] ap)
         {
@@ -56,7 +74,10 @@
                     low[u] = Math.Min(low[u], disc[v]);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public bool[] AP()
         {
             bool[] visited = new bool[V];

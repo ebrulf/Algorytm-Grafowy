@@ -1,4 +1,6 @@
-﻿namespace wierzcholki_rozdzielajace
+﻿
+using System.Windows.Forms;
+namespace wierzcholki_rozdzielajace
 {
     partial class Form1
     {

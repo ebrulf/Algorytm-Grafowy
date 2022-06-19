@@ -1,4 +1,9 @@
 using Algorytm;
+using System;
+using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Drawing;
+
 
 namespace wierzcholki_rozdzielajace
 {
@@ -10,6 +15,9 @@ namespace wierzcholki_rozdzielajace
         string missing_vertex = "";
         int vertices = 0;
         int edges = 0;
+        /// <summary>
+        /// 
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -18,7 +26,9 @@ namespace wierzcholki_rozdzielajace
             initAddVertexBtn();
             addVertexSlot();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void addVertexSlot()
         {
             Panel p = new Panel();
@@ -33,7 +43,10 @@ namespace wierzcholki_rozdzielajace
             flowLayoutPanel1.Controls.Add(p);
             flowLayoutPanel1.Controls.SetChildIndex(addVertexBtn, flowLayoutPanel1.Controls.Count-1);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public bool parseGraph()
         {
             vertexNames.Clear();
@@ -71,19 +84,29 @@ namespace wierzcholki_rozdzielajace
 
             return true;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void initAddVertexBtn()
         {
             addVertexBtn = new Button() { Text = "Dodaj Wierzcho³ek",Width=150 };
             addVertexBtn.Click += new System.EventHandler(addVertexBtn_Click);
             flowLayoutPanel1.Controls.Add(addVertexBtn);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addVertexBtn_Click(object sender,EventArgs e)
         {
             addVertexSlot();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void calcBtn_Click(object sender, EventArgs e)
         {
             if(parseGraph())
@@ -120,6 +143,11 @@ namespace wierzcholki_rozdzielajace
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void resetBtn_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
