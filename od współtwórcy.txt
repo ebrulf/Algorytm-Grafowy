@@ -1,0 +1,10 @@
+Jeszcze krócej o projekcie:
+
+Projekt został zrobiony w tandemie z Jakubem Nawrockim - on dorobił algorytm i GUI, ja zaproponowałem technologię.
+Projekt został zrealizowany w .NET 6 i działa na wszystkich systemach Windows 10 na procesory x64 (tak się skompilowało).
+Projekt dostępny jest wyłącznie w języku polskim.
+
+Instrukcja obsługi:
+W rozwiązaniu "grafy" dostępny jest projekt "app". W folderze bin dwukrotnie nacisnąć plik app.exe
+Wprowadzić listy sąsiedztwa i dla gotowego grafu wcisnąć przycisk wyszukiwania wierzchołków.
+Wynik wypisze się w konsoli poniżej przycisku.
